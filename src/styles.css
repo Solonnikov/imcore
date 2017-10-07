@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #2a3b45;
+    color: #fff;
+}
+
+.ngx-pagination {
+    font-size: 0.7em !important;
+}
+
+/* Draggable*/
+.drag-border {
+    border: #ff525b dashed 2px;
+}
+
+.drag-handle {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+.drag-handle:active { 
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+/* Droppable */
+
+.drag-hint-border {
+    border: #3c763d dashed 2px !important;
+}
+
+.drag-over-border {
+    border: #fbbc05 dashed 2px !important;
+}
+
+.drag-transit {
+    border: #3500FF dashed 2px !important;
+}

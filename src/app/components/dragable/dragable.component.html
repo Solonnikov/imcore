@@ -1,0 +1,61 @@
+<div class="container text-center">
+  <h1>Item Changer</h1>
+  <div class="row">
+    <!--User 1 Bag-->
+    <div class="col-5 user1">
+      <h3>USER 1</h3>
+      <div class="row empty-slot">
+        <div *ngFor="let item of items | paginate: { id: '0', itemsPerPage: 6, currentPage: p }" class="col-4">
+          <!--Draggable Items-->
+          <div draggable [dragData]="item" class="slot">
+            <div class="dragable-item">
+              <p>{{item.itemName}}</p>
+              <img src="https://steamcommunity-a.akamaihd.net/economy/image/{{item.imageUrl}}" alt="">
+              <span>{{item.price | currency:'USD':true}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <pagination-controls id="0" (pageChange)="p = $event"></pagination-controls>
+      </div>
+    </div>
+    <!--Center Arrows-->
+    <div class="col-2 arrows">
+      <i class="fa fa-4x fa-arrow-right" aria-hidden="true"></i>
+      <i class="fa fa-4x fa-arrow-left" aria-hidden="true"></i>
+    </div>
+    <!--User 1 Bag-->
+    <div class="col-5 user2">
+      <h3>USER 2</h3>
+      <!--Droppable Items-->
+      <div droppable (onDrop)="onItemDrop($event)" class="row empty-slot">
+        <div *ngFor="let item2 of items2 | paginate: { id: '1', itemsPerPage: 6, currentPage: p1 }" class="col-4">
+          <div class="slot">
+            <div class="dragable-item">
+              <p>{{item2.itemName}}</p>
+              <img src="https://steamcommunity-a.akamaihd.net/economy/image/{{item2.imageUrl}}" alt="">
+              <span>{{item2.price | currency:'USD':true}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--User 1 Pagination-->
+      <div *ngIf="!droppedItems" class="container">
+        <pagination-controls id="1" (pageChange)="p1 = $event"></pagination-controls>
+      </div>
+      <!--User 2 Pagination-->
+      <div *ngIf="droppedItems" class="container">
+        <pagination-controls id="2" (pageChange)="p2 = $event"></pagination-controls>
+      </div>
+    </div>
+  </div>
+  <!--Save Button-->
+  <div class="container">
+    <button (click)="onAddSubmit()" class="btn btn-success btn-lg">Confirm</button>
+  </div>
+  <!--Return User 1 Items button-->
+  <div class="container">
+    <button (click)="returnItems()" class="btn btn-warning btn-lg">Clear</button>
+  </div>
+</div>

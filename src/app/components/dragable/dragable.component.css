@@ -1,0 +1,62 @@
+.container {
+    padding: 30px;
+}
+
+.col-4 {
+    padding: 0;
+}
+
+.slot {
+    background-color: #17303b;
+    width: 110px;
+    height: 180px;
+    margin: 15px;
+    padding: 15px;
+}
+
+.empty-slot {
+    border: 2px dashed #17303b;
+    background-color: #2a3b45;
+    width: 100%;
+    height: 440px;
+    margin: 0;
+    padding: 0;
+}
+
+.drag-border {
+    border: green dashed 2px;
+}
+
+img {
+    width: 100%;
+}
+
+.user1, .user2  {
+    margin-top: 100px;
+}
+
+.arrows {
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    width: 200px;
+}
+
+span {
+    font-size: 0.5em;
+    color: #4ca762;
+}
+
+p {
+    font-size: 0.5em;
+    margin-bottom: 0;
+}
+
+.ngx-pagination {
+    font-size: 0.7em !important;
+}
+
+
