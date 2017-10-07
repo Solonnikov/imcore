@@ -9,7 +9,7 @@ const path = require('path');
 
 const app = express();
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname + 'dist')));
+app.use(express.static(path.join(__dirname + '/dist')));
 
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
