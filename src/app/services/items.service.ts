@@ -27,19 +27,19 @@ export class ItemsService {
 
   // Add Item User 2
   addItem(item: any): Observable<Item> {
-    return this.http.post('add', item)
+    return this.http.post('https://dry-reef-97281.herokuapp.com/add', item)
       .map(res => item as Item);
   }
 
   // Update Item User 1
   changeItem(item: any): Observable<Item> {
-    return this.http.post('change', item)
+    return this.http.post('https://dry-reef-97281.herokuapp.com/change', item)
       .map(res => item as Item);
   }
 
   // Return User 1 Items
   returnItems(): Observable<Item[]> {
-    return this.http.get('return')
+    return this.http.get('https://dry-reef-97281.herokuapp.com/return')
       .map(res => res.json() as Item[]);
   }
 }
