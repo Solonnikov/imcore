@@ -6,10 +6,10 @@ body {
 
 .ngx-pagination {
     font-size: 0.7em !important;
+    padding-left: 0;
 }
 
 /* Draggable */
-
 .drag-border {
     border: #ff525b dashed 2px;
 }
@@ -28,7 +28,6 @@ body {
 }
 
 /* Droppable */
-
 .drag-hint-border {
     border: #3c763d dashed 2px !important;
 }

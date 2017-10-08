@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname + '/dist')));
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   res.header('Access-Control-Allow-Methods', 'POST');
@@ -21,12 +21,12 @@ app.use(function(req, res, next) {
 // Add User 2 Item
 app.post('/add', (req, res, next) => {
   console.log('Received request');
-  fs.writeFile('./src/assets/data/user2.json', JSON.stringify(req.body, null, 2), function(err){
-    if(err) throw err;
+  fs.writeFile('./src/assets/data/user2.json', JSON.stringify(req.body, null, 2), function (err) {
+    if (err) throw err;
   })
 })
 
-// Update User1 Item
+// Update User 1 Item
 app.post('/change', (req, res, next) => {
   console.log('Received request');
   fs.writeFile('./src/assets/data/user1.json', JSON.stringify(req.body, null, 2), (err) => {
@@ -37,13 +37,13 @@ app.post('/change', (req, res, next) => {
 });
 
 // Restores User1 Items, Deletes User2 Items
-app.get('/return',function(res,req) {
-    fs.createReadStream('./src/assets/data/data.json').pipe(fs.createWriteStream('./src/assets/data/user1.json'));
-    fs.createReadStream('./src/assets/data/empty.json').pipe(fs.createWriteStream('./src/assets/data/user2.json'));
+app.get('/return', function (res, req) {
+  fs.createReadStream('./src/assets/data/data.json').pipe(fs.createWriteStream('./src/assets/data/user1.json'));
+  fs.createReadStream('./src/assets/data/empty.json').pipe(fs.createWriteStream('./src/assets/data/user2.json'));
 });
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname + '/dist/index.html'));
+  res.sendFile(path.join(__dirname + '/dist/index.html'));
 });
 
 // Heroku port
@@ -52,6 +52,6 @@ app.set('port', port);
 
 const server = http.createServer(app);
 
-app.listen(port, ()=>{
+app.listen(port, () => {
   console.log('Listening on port ' + port);
 });

@@ -10,15 +10,10 @@ import { ItemsService } from '../../services/items.service';
 export class DragableComponent implements OnInit {
   item: Item;
   items: Item[];
-  item2: Item;
   items2: Item[] = [];
   returnedItems: any;
   droppedItems = false;
-  noItems = false;
-  itemDragged: any;
-  p = 1;
-  p1 = 1;
-  p2 = 1;
+  p; p1; p2 = 1;
 
   // Alowed Drop Place
   val = 500;
@@ -57,7 +52,6 @@ export class DragableComponent implements OnInit {
     // Get User 2 Items
     this.itemsService.getItems2().subscribe(items2 => {
       this.items2 = items2;
-      this.noItems = true;
       console.log('User2 current items');
       console.log(this.items2.length);
     });
