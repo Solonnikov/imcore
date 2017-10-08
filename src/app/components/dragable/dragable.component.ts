@@ -15,6 +15,7 @@ export class DragableComponent implements OnInit {
   returnedItems: any;
   droppedItems = false;
   noItems = false;
+  itemDragged: any;
   p = 1;
   p1 = 1;
   p2 = 1;
@@ -28,18 +29,17 @@ export class DragableComponent implements OnInit {
   // Drop Item Event
   onItemDrop(e: any) {
     // Get the dropped data here
-    this.items2.push({
-      accetId: e.dragData.accetId,
-      itemName: e.dragData.itemName,
-      imageUrl: e.dragData.imageUrl,
-      marketHashName: e.dragData.marketHashName,
-      itemType: e.dragData.itemType,
-      price: e.dragData.price,
-      status: e.dragData.status
-    });
+    this.items2.push(e.dragData);
     console.log('User2 Total dropped and pending items ' + this.items2.length);
 
-    this.items.splice(e.dragData, 1);
+    // Splice specific dragged Item
+    for (let i = 0; i < this.items.length; i++) {
+      if (this.items[i].accetId === e.dragData.accetId) {
+        this.items.splice(i, 1);
+        break;
+      }
+    }
+
     console.log('User1 left pending items ' + this.items.length);
   }
 

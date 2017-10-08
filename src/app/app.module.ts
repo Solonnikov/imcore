@@ -24,11 +24,11 @@ import { DragableComponent } from './components/dragable/dragable.component';
     Ng2DragDropModule.forRoot(),
     RouterModule.forRoot([
       { path: '', component: DragableComponent },
-  ]),
+    ]),
   ],
   providers: [
     ItemsService
-    ],
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

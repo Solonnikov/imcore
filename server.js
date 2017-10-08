@@ -18,11 +18,10 @@ app.use(function(req, res, next) {
   next();
 });
 
-
 // Add User 2 Item
 app.post('/add', (req, res, next) => {
   console.log('Received request');
-  fs.writeFile('./dist/assets/data/user2.json', JSON.stringify(req.body, null, 2), function(err){
+  fs.writeFile('./src/assets/data/user2.json', JSON.stringify(req.body, null, 2), function(err){
     if(err) throw err;
   })
 })
@@ -30,7 +29,7 @@ app.post('/add', (req, res, next) => {
 // Update User1 Item
 app.post('/change', (req, res, next) => {
   console.log('Received request');
-  fs.writeFile('./dist/assets/data/user1.json', JSON.stringify(req.body, null, 2), (err) => {
+  fs.writeFile('./src/assets/data/user1.json', JSON.stringify(req.body, null, 2), (err) => {
     if (err) throw err;
     console.log('File changed');
     res.send('File changed');
@@ -39,8 +38,8 @@ app.post('/change', (req, res, next) => {
 
 // Restores User1 Items, Deletes User2 Items
 app.get('/return',function(res,req) {
-    fs.createReadStream('./dist/assets/data.json').pipe(fs.createWriteStream('./dist/assets/data/user1.json'));
-    fs.createReadStream('./dist/assets/empty.json').pipe(fs.createWriteStream('./dist/assets/user2.json'));
+    fs.createReadStream('./src/assets/data/data.json').pipe(fs.createWriteStream('./src/assets/data/user1.json'));
+    fs.createReadStream('./src/assets/data/empty.json').pipe(fs.createWriteStream('./src/assets/data/user2.json'));
 });
 
 app.get('*', (req, res) => {

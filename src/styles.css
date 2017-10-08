@@ -8,7 +8,8 @@ body {
     font-size: 0.7em !important;
 }
 
-/* Draggable*/
+/* Draggable */
+
 .drag-border {
     border: #ff525b dashed 2px;
 }
