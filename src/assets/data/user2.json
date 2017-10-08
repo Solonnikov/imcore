@@ -16,32 +16,5 @@
     "itemType": "milspec",
     "price": 11,
     "status": "free"
-  },
-  {
-    "accetId": "11774957100",
-    "itemName": "M249 | System Lock",
-    "imageUrl": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-jxcjhjxszFI2kb08-zn5SEhcj4OrzZgiVSsZAmj76R9tqg3gTm_xFuMGn1JtCSI1A8YVvRq1a4krzs1p6_6pya1zI97fYyj9_i",
-    "marketHashName": "M249 | System Lock (Minimal Wear)",
-    "itemType": "milspec",
-    "price": 12,
-    "status": "free"
-  },
-  {
-    "accetId": "11767405931",
-    "itemName": "M249 | Spectre",
-    "imageUrl": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-jxcjhjxszFI2kb08-mkYOfhfLLP7LWnn8f6pVw2LrCodjw3QLn8kM-ZzuhcNWXIQU2aFHR-we4kr3t15K-6MzKnWwj5HdN0A91jg",
-    "marketHashName": "M249 | Spectre (Minimal Wear)",
-    "itemType": "milspec",
-    "price": 11,
-    "status": "free"
-  },
-  {
-    "accetId": "11767378458",
-    "itemName": "MP7 | Akoben",
-    "imageUrl": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou6ryFBRw7P7YJgJW_tW0lYy0jvL4P7TGqWdY781lxLjCpdnx2gPg80Q6Njv2cI6XJw4_Z13X-FC3xey61JXtupqczyAyuSM8pSGKG3rzCmA",
-    "marketHashName": "MP7 | Akoben (Minimal Wear)",
-    "itemType": "milspec",
-    "price": 12,
-    "status": "free"
   }
 ]
