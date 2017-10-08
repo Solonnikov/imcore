@@ -5,6 +5,7 @@ import { Item } from '../models/Item';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/switchMap';
 
 @Injectable()
 export class ItemsService {
